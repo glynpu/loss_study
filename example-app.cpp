@@ -4,6 +4,7 @@
 #include<rnnt/macros.h>
 #include<rnnt/types.h>
 #include<rnnt/options.h>
+#include <rnnt/workspace.h>
 
 int main() {
   torch::Tensor tensor = torch::rand({2, 3});
@@ -21,6 +22,11 @@ int main() {
 
   torchaudio::rnnt::Options o;
   std::cout << o << std::endl;
+
+  std::cout << CHECK_NE(1, 2);
+  std::cout << std::endl;
+  torchaudio::rnnt::Workspace<torchaudio::rnnt::IntWorkspace> iw;
+  std::cout << iw.GetOptions() << std::endl;
 
   return 0;
 }

@@ -20,8 +20,9 @@ set(
 set(
   SOURCES
   ${CMAKE_SOURCE_DIR}/example-app.cpp
-  ${CMAKE_SOURCE_DIR}/rnnt/macros.cpp
   )
+message("sources: ******* "${SOURCES})
+
 
 if(USE_CUDA)
   # enable_language(CUDA)
@@ -32,6 +33,21 @@ if(USE_CUDA)
     USE_CUDA
   )
 endif()
+
+set(
+  RNNT_SOURCES
+  rnnt/macros.cpp
+  rnnt/types.cpp
+  )
+
+list(
+  APPEND
+  SOURCES
+  ${RNNT_SOURCES}
+  )
+
+message("rnnt sources: ======= "${RNNT_SOURCES})
+message("sources: ======= "${SOURCES})
 
 set(main example-app)
 add_executable(${main} ${SOURCES})

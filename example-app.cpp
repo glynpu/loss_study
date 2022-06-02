@@ -2,6 +2,7 @@
 #include <iostream>
 
 #include<rnnt/macros.h>
+#include<rnnt/types.h>
 
 int main() {
   torch::Tensor tensor = torch::rand({2, 3});
@@ -13,6 +14,9 @@ int main() {
   x = ERROR;
   std::cout << x << std::endl;
   std::cout << ToString(x) << std::endl;
+
+  torchaudio::rnnt::status_t y = torchaudio::rnnt::status_t::SUCCESS;
+  std::cout << torchaudio::rnnt::toString(y) << std::endl;
 
   return 0;
 }

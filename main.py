@@ -18,4 +18,5 @@ clamp=-1
 loss = rnnt_loss(logits, targets, logit_lengths, target_lengths, blank)
 assert torch.isclose(loss, torch.tensor(4.4957)), loss
 print(loss)
-# loss.backward()
+loss.backward()
+print(logits.grad)

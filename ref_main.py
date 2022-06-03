@@ -19,4 +19,5 @@ transform = torchaudio.transforms.RNNTLoss(blank=0)
 loss = transform(logits, targets, logit_lengths, target_lengths)
 loss.backward()
 print(loss)
+print(logits.grad)
 

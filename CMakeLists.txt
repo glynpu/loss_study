@@ -49,6 +49,7 @@ set(
   rnnt/cpu/compute.cpp
   rnnt/cpu/compute_alphas.cpp
   rnnt/cpu/compute_betas.cpp
+  rnnt/autograd.cpp
   )
 
 list(

@@ -47,6 +47,8 @@ set(
   rnnt/types.cpp
   rnnt/compute.cpp
   rnnt/cpu/compute.cpp
+  rnnt/cpu/compute_alphas.cpp
+  rnnt/cpu/compute_betas.cpp
   )
 
 list(

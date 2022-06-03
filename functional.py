@@ -62,6 +62,3 @@ def rnnt_loss(
         return costs.sum()
 
     return costs
-
-a = torch.tensor([0.0])
-rnnt_loss(a, a, a, a, 0, 0.0)
